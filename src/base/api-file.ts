@@ -1,15 +1,15 @@
 import { Project, TextFile } from 'projen';
 
-export function apiFile(project: Project, fileName: string) {
-  const interfaceName = `I${fileName.charAt(0).toUpperCase() + fileName.slice(1)}`;
-  const propsName = `${fileName.charAt(0).toUpperCase() + fileName.slice(1)}Props`;
+export function apiFile(project: Project, name: string) {
+  const interfaceName = `I${name.charAt(0).toUpperCase() + name.slice(1)}`;
+  const propsName = `${name.charAt(0).toUpperCase() + name.slice(1)}Props`;
 
   new TextFile(project, 'api.w', {
     readonly: false,
     lines: [
       'bring util;',
       '',
-      `pub class ${interfaceName} extends std.IResource {`,
+      `pub interface ${interfaceName} extends std.IResource {`,
       '}',
       '',
       `pub struct ${propsName} {`,

@@ -1,8 +1,8 @@
 import { Project, TextFile } from 'projen';
 
-export function mainTargetFile(project: Project, fileName: string, target: string) {
-  const className = `${fileName.charAt(0).toUpperCase() + fileName.slice(1)}`;
-  new TextFile(project, `${fileName}.${target}.w`, {
+export function mainTargetFile(project: Project, name: string, target: string) {
+  const className = `${name.charAt(0).toUpperCase() + name.slice(1)}`;
+  new TextFile(project, `${name}.${target}.w`, {
     readonly: false,
     lines: [
       'bring util;',
