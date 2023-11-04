@@ -1,7 +1,7 @@
 import { existsSync } from 'fs';
 import { NodeProject, NodeProjectOptions } from 'projen/lib/javascript';
-import { mainFile } from './base/main-file';
 import { apiFile } from './base/api-file';
+import { mainFile } from './base/main-file';
 import { mainTargetFile } from './base/main-target-file';
 
 export class WingLib extends NodeProject {
