@@ -1,5 +1,5 @@
 import { existsSync } from 'fs';
-import { NodeProject, NodeProjectOptions } from 'projen/lib/javascript';
+import { NodePackageManager, NodeProject, NodeProjectOptions } from 'projen/lib/javascript';
 import { apiFile } from './base/api-file';
 import { mainFile } from './base/main-file';
 import { mainTargetFile } from './base/main-target-file';
@@ -11,6 +11,7 @@ export class WingLib extends NodeProject {
       codeCov: false,
       clobber: false,
       jest: false,
+      packageManager: NodePackageManager.NPM,
       readme: {
         contents: `# ${options.name}`,
       },
