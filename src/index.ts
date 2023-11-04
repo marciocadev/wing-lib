@@ -13,6 +13,8 @@ export class WingLib extends NodeProject {
       jest: false,
       packageManager: NodePackageManager.NPM,
       description: `${options.name} library`,
+      authorName: `${options.authorName}`,
+      authorEmail: `${options.authorEmail}`,
       readme: {
         contents: `# ${options.name}`,
       },
