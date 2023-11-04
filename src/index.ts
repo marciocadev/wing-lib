@@ -5,19 +5,19 @@ import { mainFile } from './base/main-file';
 import { mainTargetFile } from './base/main-target-file';
 
 export class WingLib extends NodeProject {
-  constructor(props: NodeProjectOptions) {
+  constructor(options: NodeProjectOptions) {
     super({
       github: false,
       codeCov: false,
       clobber: false,
       jest: false,
       readme: {
-        contents: `# ${props.name}`,
+        contents: `# ${options.name}`,
       },
-      ...props,
+      ...options,
     });
 
-    const mainFilename = `${props.name}.w`;
+    const mainFilename = `${options.name}.w`;
     if (!existsSync(mainFilename)) {
       mainFile(this, mainFilename);
     }

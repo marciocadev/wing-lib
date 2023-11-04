@@ -9,16 +9,16 @@
 ```typescript
 import { WingLib } from '@marciocadev/wing-lib-template'
 
-new WingLib(props: NodeProjectOptions)
+new WingLib(options: NodeProjectOptions)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@marciocadev/wing-lib-template.WingLib.Initializer.parameter.props">props</a></code> | <code>projen.javascript.NodeProjectOptions</code> | *No description.* |
+| <code><a href="#@marciocadev/wing-lib-template.WingLib.Initializer.parameter.options">options</a></code> | <code>projen.javascript.NodeProjectOptions</code> | *No description.* |
 
 ---
 
-##### `props`<sup>Required</sup> <a name="props" id="@marciocadev/wing-lib-template.WingLib.Initializer.parameter.props"></a>
+##### `options`<sup>Required</sup> <a name="options" id="@marciocadev/wing-lib-template.WingLib.Initializer.parameter.options"></a>
 
 - *Type:* projen.javascript.NodeProjectOptions
 
