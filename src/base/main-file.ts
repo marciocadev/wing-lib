@@ -5,8 +5,8 @@ export function mainFile(project: Project, fileName: string) {
   new TextFile(project, fileName, {
     lines: [
       'bring util;',
-      `bring "./${className}.sim.w" as sim;`,
-      `bring "./${className}.tfaws.w" as tfaws;`,
+      `bring "./${fileName}.sim.w" as sim;`,
+      `bring "./${fileName}.tfaws.w" as tfaws;`,
       'bring "./api.w" as api;',
       '',
       `pub class ${className} impl api.I${className} {`,

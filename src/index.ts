@@ -19,19 +19,19 @@ export class WingLib extends NodeProject {
 
     const mainFilename = `${options.name}.w`;
     if (!existsSync(mainFilename)) {
-      mainFile(this, mainFilename);
+      mainFile(this, options.name);
     }
 
     if (!existsSync('api.w')) {
-      apiFile(this, mainFilename);
+      apiFile(this, options.name);
     }
 
     if (!existsSync(`${mainFilename}.sim.w`)) {
-      mainTargetFile(this, `${mainFilename}.sim.w`, 'sim');
+      mainTargetFile(this, `${options.name}.sim.w`, 'sim');
     }
 
     if (!existsSync(`${mainFilename}.tfaws.w`)) {
-      mainTargetFile(this, `${mainFilename}.tfaws.w`, 'tfaws');
+      mainTargetFile(this, `${options.name}.tfaws.w`, 'tfaws');
     }
   }
 }
