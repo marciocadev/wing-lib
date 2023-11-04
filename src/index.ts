@@ -17,8 +17,7 @@ export class WingLib extends NodeProject {
       ...options,
     });
 
-    const mainFilename = `${options.name}.w`;
-    if (!existsSync(mainFilename)) {
+    if (!existsSync(`${options.name}.w`)) {
       mainFile(this, options.name);
     }
 
@@ -26,11 +25,11 @@ export class WingLib extends NodeProject {
       apiFile(this, options.name);
     }
 
-    if (!existsSync(`${mainFilename}.sim.w`)) {
+    if (!existsSync(`${options.name}.sim.w`)) {
       mainTargetFile(this, `${options.name}`, 'sim');
     }
 
-    if (!existsSync(`${mainFilename}.tfaws.w`)) {
+    if (!existsSync(`${options.name}.tfaws.w`)) {
       mainTargetFile(this, `${options.name}`, 'tfaws');
     }
   }
