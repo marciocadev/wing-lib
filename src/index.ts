@@ -15,8 +15,9 @@ export class WingLib extends NodeProject {
       ...props,
     });
 
-    if (!existsSync(`${props.name}.main.w`)) {
-      mainFile(this);
+    const fileName = `${props.name}.w`;
+    if (!existsSync(fileName)) {
+      mainFile(this, fileName);
     }
   }
 }
