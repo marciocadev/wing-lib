@@ -12,6 +12,7 @@ export class WingLib extends NodeProject {
       clobber: false,
       jest: false,
       packageManager: NodePackageManager.NPM,
+      description: `${options.name} library`,
       readme: {
         contents: `# ${options.name}`,
       },
