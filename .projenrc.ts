@@ -1,14 +1,21 @@
 import { cdk } from 'projen';
+import { NpmAccess } from 'projen/lib/javascript';
 const project = new cdk.JsiiProject({
   author: 'Marcio Cruz de Almeida',
   authorAddress: 'marciocadev@gmail.com',
   defaultReleaseBranch: 'main',
   jsiiVersion: '~5.0.0',
-  name: 'wing-lib',
+  name: '@marciocadev/wing-lib',
   projenrcTs: true,
   repositoryUrl: 'https://github.com/marciocadev/wing-lib.git',
 
-  // deps: [],                /* Runtime dependencies of this module. */
+  release: true,
+  publishTasks: true,
+  releaseToNpm: true,
+  npmAccess: NpmAccess.PUBLIC,
+
+  deps: ['projen', 'constructs'], /* Runtime dependencies of this module. */
+  peerDeps: ['projen', 'constructs'],
   // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
   // devDeps: [],             /* Build dependencies for this module. */
   // packageName: undefined,  /* The "name" in package.json. */
