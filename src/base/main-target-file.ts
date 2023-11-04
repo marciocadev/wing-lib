@@ -3,6 +3,7 @@ import { Project, TextFile } from 'projen';
 export function mainTargetFile(project: Project, fileName: string, target: string) {
   const className = `${fileName.charAt(0).toUpperCase() + fileName.slice(1)}`;
   new TextFile(project, fileName, {
+    readonly: false,
     lines: [
       'bring util;',
       `bring ${target};`,
