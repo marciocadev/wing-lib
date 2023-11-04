@@ -9,7 +9,7 @@ export function apiFile(project: Project, fileName: string) {
     lines: [
       'bring util;',
       '',
-      `pub class ${interfaceName} extends std.IResource {`,
+      `pub interface ${interfaceName} extends std.IResource {`,
       '}',
       '',
       `pub struct ${propsName} {`,
