@@ -5,7 +5,7 @@ const project = new cdk.JsiiProject({
   authorAddress: 'marciocadev@gmail.com',
   defaultReleaseBranch: 'main',
   jsiiVersion: '~5.0.0',
-  name: '@marciocadev/wing-lib',
+  name: '@marciocadev/wing-lib-template',
   projenrcTs: true,
   repositoryUrl: 'https://github.com/marciocadev/wing-lib.git',
 
