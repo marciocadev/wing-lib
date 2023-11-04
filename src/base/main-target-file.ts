@@ -6,7 +6,6 @@ export function mainTargetFile(project: Project, name: string, target: string) {
     readonly: false,
     lines: [
       'bring util;',
-      `bring ${target};`,
       'bring "./api.w" as api;',
       '',
       `pub class ${className}_${target} impl api.I${className} {`,
