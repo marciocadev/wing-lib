@@ -27,11 +27,11 @@ export class WingLib extends NodeProject {
     }
 
     if (!existsSync(`${mainFilename}.sim.w`)) {
-      mainTargetFile(this, `${options.name}.sim.w`, 'sim');
+      mainTargetFile(this, `${options.name}`, 'sim');
     }
 
     if (!existsSync(`${mainFilename}.tfaws.w`)) {
-      mainTargetFile(this, `${options.name}.tfaws.w`, 'tfaws');
+      mainTargetFile(this, `${options.name}`, 'tfaws');
     }
   }
 }
